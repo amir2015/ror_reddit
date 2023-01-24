@@ -9,6 +9,14 @@ end
 def create
 @sub = Sub.new(sub_params)
 if @sub.save
+    
+    
+    
+     
+    
+     
+    
+     
     render json:sub
 else
     render json: {errors: @sub.errors},status: :unprocessable_entity  

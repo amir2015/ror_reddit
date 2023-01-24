@@ -22,7 +22,7 @@ def create
     end
 else
     
-end
+end  
 def update
     # @topic=Topic.find(params[:id])
     if @topic.update(topic_params)
