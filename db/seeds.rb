@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+Sub.delete_all 
+5.times do
+ Sub.create(
+    title: Faker::Games::SuperMario.character
+  )
+end

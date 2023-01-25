@@ -8,12 +8,14 @@ Rails.application.routes.draw do
   resources :subs do
     resources :topics
   end
-  resources :topics except: [:index,:create,:update,:destroy,:show] do
+  resources :topics, except: [:index,:create,:update,:destroy,:show] do
       resources :comments
   end
+  
 
-  # resources :comments except: [:index,:create,:update,:destroy,:show] do
-    # resources :likes
-  # end
+  resources :comments, except: [:index,:create,:update,:destroy,:show] do
+    resources :likes
   end
+ 
+end
 end
