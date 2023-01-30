@@ -1,9 +1,9 @@
 import SubShow from "./SubShow";
 
-const SubList = ({ subs }) => (
+const SubList = ({ subs, deleteSub }) => (
   <>
     {subs.map((sub) => (
-      <SubShow key={sub.id} {...sub} />
+      <SubShow key={sub.id} {...sub} deleteSub={deleteSub} />
     ))}
   </>
 );
